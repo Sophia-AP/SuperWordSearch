@@ -1,0 +1,4 @@
+SuperWordSearch
+===============
+
+Word Search solvers
