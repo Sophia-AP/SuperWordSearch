@@ -1,4 +1,5 @@
 Introduction
+
 In a typical word search puzzle (http://en.wikipedia.org/wiki/Word_search), you are given an NxM grid of seemingly random letters and a list of P words that are in the grid. The words can be found going in any of the 8 directions in a two dimensional grid:
 ●  top to bottom
 ●	bottom to top
@@ -10,6 +11,7 @@ In a typical word search puzzle (http://en.wikipedia.org/wiki/Word_search), you 
 ●	top right to bottom left
 
 You're a college professor (for English and Topology, of all things), and your students have become very good at traditional Word Search. Since you want them to continue spending time on academic games, you created a variant of Word Search (inventively) called Super Word Search.
+
 The rules of the game
 As with a standard word search, you get an NxM grid of letters, and P words that are to be found in the grid. You also get a "mode" flag with one of the following values: WRAP, NO_WRAP. The flag value indicates whether words can wrap-around after they hit a boundary of the grid.
 
@@ -35,6 +37,7 @@ If we are in NO_WRAP mode:
 ●	"BID" is not a word since it requires wrapping in the horizontal and vertical directions.
 
 A letter in the grid is not allowed to be in a word more than once. So, while technically "HIGH" can be found in the above grid in WRAP mode, we will not allow it because it uses the H at (2,1) twice.
+
 Input Format
 N M
 N rows of M letters
@@ -43,12 +46,15 @@ P
 P words with 1 word per lines
 
 Your program should accept the name of an input file which will contain data in the above format.
+
 Output Format
 For each of the P words, you are to output the start and end coordinates of that word in the format "(row_start, column_start) (row_end, column_end)". If the word cannot be found in the grid, output "NOT FOUND".
 
 You are guaranteed that each word will occur at most once in the grid, so a word's start and end coordinates will always be unique (if the word is in the grid), and will never be ambiguous.
 Your program can write its output to the screen/console.
+
 Examples
+
 Input
 3 3
 ABC
@@ -61,12 +67,14 @@ CAB
 GAD
 BID
 HIGH
+
 Output
 (1,2) (1,0)
 NOT FOUND
 NOT FOUND
 NOT FOUND
 NOT FOUND
+
 Input
 3 3
 ABC
@@ -79,6 +87,7 @@ CAB
 GAD
 BID
 HIGH
+
 Output
 (1,2) (1,0)
 (0,2) (0,1)
